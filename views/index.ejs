@@ -11,8 +11,62 @@
   <link rel='stylesheet' href='/Content/app.css' />
 </head>
 <body>
-  <h1>Welcome to the <%= title %> page</h1>
+   <!--Main navigation Section-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+         <% if (title == "Home") {%>
+        <li class = "nav-item active">
+          <% } else {%>
+          <li class = "nav-item">
+            <% } %>
+            <a class="nav-link" aria-current="page" href="/"><i class="fas fa-lg fa-house"></i> Home</a>
+          </li>
+
+          <% if (title == "About me") {%>
+            <li class = "nav-item active">
+              <% } else {%>
+              <li class = "nav-item">
+                <% } %>
+            <a class="nav-link" aria-current="page" href="/about"><i class="fas fa-info-circle"></i>About me</a>
+          </li>
+          
+          <% if (title == "Projects") {%>
+            <li class = "nav-item active">
+              <% } else {%>
+              <li class = "nav-item">
+                <% } %>
+            <a class="nav-link" aria-current="page" href="/projects"><i class="fab fa-elementor"></i>Projects</a>
+          </li>
+          
+          <% if (title == "Services") {%>
+            <li class = "nav-item active">
+              <% } else {%>
+              <li class = "nav-item">
+                <% } %>
+            <a class="nav-link" aria-current="page" href="/services"><i class="fas fa-cogs"></i>Services</a>
+          </li>
+          
+          <% if (title == "Contact us") {%>
+            <li class = "nav-item active">
+              <% } else {%>
+              <li class = "nav-item">
+                <% } %>
+            <a class="nav-link" aria-current="page" href="/contact"><i class="fas fa-phone"></i>Contact us</a>
+          </li>
+        </ul>
+
+        <img src="./public/Assets/images/logo.jpeg" alt="Logo" class="navbar-logo">
+      </div>  
+    </div>
+  </nav>
+  <h1>Welcome to the <%= title %> page</h1>
    <!--Script Section-->
   <script src="/jquery/dist/jquery.min.js"></script>
   <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
