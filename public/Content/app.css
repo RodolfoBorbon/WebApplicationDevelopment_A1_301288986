@@ -1,4 +1,9 @@
-/*custom css goes here */
+/*
+File name: app.css 
+Student’s Name: Rodolfo Borbon
+StudentID: 301288986
+Date: June 04, 2023
+ */
 
 /* Style the navigation bar */
 .navbar {
@@ -165,7 +170,7 @@ footer {
   
   input[type="submit"],
   input[type="reset"] {
-    background-color:  #948b27;
+    background-color: #2e88b1;
     color: #fff;
     padding: 8px 16px;
     border: none;
