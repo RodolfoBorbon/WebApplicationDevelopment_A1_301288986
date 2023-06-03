@@ -1,14 +1,15 @@
-<!--Import header section from partials folder--><%-include partials/header.ejs %>
+<!--Import header section from partials folder-->
+<%-include ('partials/header.ejs') %>
 
 <!--Import navigation bar section from partials folder-->
-<%- include partials/main_nav.ejs %>
+<%- include ('partials/main_nav.ejs') %>
 
 <h1><%= message %></h1>
 <h2><%= error.status %></h2>
 <pre><%= error.stack %></pre>
 
 <!--Import bottom navigation bar section from partials folder-->
-<%- include partials/bottom_nav.ejs %>
+<%- include ('partials/bottom_nav.ejs') %>
 
 <!--Import footer section from partials folder-->
-<%- include partials/footer.ejs %>
+<%- include ('partials/footer.ejs') %>
