@@ -169,4 +169,50 @@ footer {
     display: block;
     clear: both;
   }
+
+  /* Style for the services page */
+  #services-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #services-section h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #services-section ol {
+    list-style-type: number;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #services-section li {
+    width: 300px;
+    margin: 25px;
+    font-size: 10px;
+  }
+  
+  #services-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #services-section img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #services-section br {
+    display: none;
+  }
+  
+  #services-section::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
   
