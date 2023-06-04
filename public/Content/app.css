@@ -22,11 +22,15 @@ Date: June 04, 2023
     margin-top: 1%;
   }
   .nav-link {
-    color: #7d7f8d;
+    color: #a4a7b1;
   } 
   /* Style the active navigation item */
   .nav-item.active .nav-link {
     font-weight: bold;
+    color: #60afb8;
+  }
+
+  .nav-link:hover {
     color: rgb(255, 255, 255);
   }
   /* Style the logo image */
@@ -81,7 +85,7 @@ footer {
 }
 
 #home-section button:hover {
-  background-color: #419e5d;
+  background-color: #3f3b3e;
 }
   
 /* Style for the About page */
@@ -111,7 +115,7 @@ footer {
   }
   
   #about-section button {
-    background-color: #43317c;
+    background-color: #45929a;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -122,7 +126,7 @@ footer {
   }
   
   #about-section button:hover {
-    background-color: #942585;
+    background-color: #3f3b3e;
   }
 
   /* Style for the Projects page */
@@ -251,7 +255,7 @@ footer {
 #contact-section input[type="submit"] {
   width: 150px;
   padding: 8px;
-  background-color: #43317c;
+  background-color: #45929a;
   color: #fff;
   font-weight: bold;
   border: none;
@@ -264,7 +268,7 @@ footer {
 #contact-section input[type="reset"] {
   width: 150px;
   padding: 8px;
-  background-color: #884097;
+  background-color: #45929a;
   color: #fff;
   font-weight: bold;
   border: none;
@@ -275,11 +279,11 @@ footer {
 }
 
 #contact-section input[type="reset"]:hover {
-  background-color: #45a049;
+  background-color: #3f3b3e;
 }
 
 #contact-section input[type="submit"]:hover {
-  background-color: #c0a43e;
+  background-color: #3f3b3e;
 }
 
 #contact-section textarea {
