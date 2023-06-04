@@ -5,22 +5,25 @@ StudentID: 301288986
 Date: June 04, 2023
  */
 
-//Installed 3rd party packages
+//Install 3rd party packages
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+//Routes modules
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
+//Create an Express application instance
 let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs'); //Express -e
 
+//middleware setup
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -47,4 +50,5 @@ app.use(function(err, req, res, next) {
   res.render('error', { title: 'Error'});
 });
 
+//export the express application instance
 module.exports = app;
