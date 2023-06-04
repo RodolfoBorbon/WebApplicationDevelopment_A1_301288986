@@ -215,4 +215,79 @@ footer {
     clear: both;
   }
 
+/* Style for the contact page */
+#contact-section {
+  text-align: center;
+  padding: 20px;
+}
+
+#contact-section h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#contact-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4%;
+}
+
+#contact-section label {
+  font-weight: none;
+  margin-bottom: 10px;
+}
+
+#contact-section input,
+#contact-section textarea {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact-section input[type="submit"] {
+  width: 150px;
+  padding: 8px;
+  background-color: #43317c;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
+
+#contact-section input[type="reset"] {
+  width: 150px;
+  padding: 8px;
+  background-color: #884097;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
+
+#contact-section input[type="reset"]:hover {
+  background-color: #45a049;
+}
+
+#contact-section input[type="submit"]:hover {
+  background-color: #c0a43e;
+}
+
+#contact-section textarea {
+  resize: vertical;
+}
+
+#contact-section br {
+  display: none;
+}
+
   
