@@ -124,4 +124,49 @@ footer {
   #about-section button:hover {
     background-color: #942585;
   }
+
+  /* Style for the Projects page */
+  #projects-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #projects-section h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #projects-section ol {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #projects-section li {
+    width: 400px;
+    margin: 30px;
+  }
+  
+  #projects-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #projects-section img {
+    width: 90%;
+    height: 60%;
+  }
+  
+  #projects-section br {
+    display: none;
+  }
+  
+  #projects-section::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
   
