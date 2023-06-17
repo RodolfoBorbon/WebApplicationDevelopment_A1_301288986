@@ -25,11 +25,11 @@
                             <th class="text-center">Email</th>
                         </tr>
                         <!-- Table Body-->
-                        <% for (let count = 0; count < ContactList.length; count++) { %>
+                        <% for (let count = 0; count < ContactsList.length; count++) { %>
                             <tr>
-                                <td class="text-center"><%= ContactList[count].Name %></td>
-                                <td class="text-center"><%= ContactList[count].Number %></td>
-                                <td class="text-center"><%= ContactList[count].Email %></td>
+                                <td class="text-center"><%= ContactsList[count].Name %></td>
+                                <td class="text-center"><%= ContactsList[count].Number %></td>
+                                <td class="text-center"><%= ContactsList[count].Email %></td>
                             </tr>
                         <% } %>
                 </table>
