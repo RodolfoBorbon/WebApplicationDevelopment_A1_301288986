@@ -20,16 +20,16 @@ router.get('/', async (req, res, next) => {
 });
 
 //GET Route for displaying the Add page - CREATE Operation
-router.get('/add_contact', async (req, res, next) => {
+router.get('/add', async (req, res, next) => {
     try {
-        res.render('business_contacts/add_contact.ejs', { title: 'Business contacts' });
+        res.render('business_contacts/add.ejs', { title: 'Business contacts' });
     } catch (err) {
         console.log(err);
     }
 });
 
 //POST Route for processing the Add page - CREATE Operation
-router.post('/add_contact', async (req, res, next) => {
+router.post('/add', async (req, res, next) => {
     let newContact = Contacts({
         "Name": req.body.name,
         "Number": req.body.number,
@@ -45,11 +45,11 @@ router.post('/add_contact', async (req, res, next) => {
 });
 
 //GET Route for displaying the Edit page - UPDATE Operation
-router.get('/edit_contact/:id', async (req, res, next) => {
+router.get('/edit/:id', async (req, res, next) => {
     let id = req.params.id;
     try {
         let contactsToEdit = await Contacts.findById(id);
-        res.render('business_contacts/edit_contact.ejs', { title: 'Edit contacts', contacts: contactsToEdit });
+        res.render('business_contacts/edit.ejs', { title: 'Edit contacts', contacts: contactsToEdit });
     } catch (err) {
         console.log(err);
         res.status(500).send(err);
@@ -57,7 +57,7 @@ router.get('/edit_contact/:id', async (req, res, next) => {
 });
 
 //POST Route for processing the Edit page - UPDATE Operation
-router.post('/edit_contact/:id', async (req, res, next) => {
+router.post('/edit/:id', async (req, res, next) => {
     let id = req.params.id;
     let updatedContacts = {
         "Name": req.body.name,
@@ -75,7 +75,7 @@ router.post('/edit_contact/:id', async (req, res, next) => {
 });
 
 //GET to perform Deletion - DELETE Operation
-router.get('/delete_contact/:id', async (req, res, next) => {
+router.get('/delete/:id', async (req, res, next) => {
     let id = req.params.id;
 
     try {

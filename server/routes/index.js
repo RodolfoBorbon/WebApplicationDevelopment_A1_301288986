@@ -34,7 +34,7 @@ router.get('/contact', function(req, res, next) {
   res.render('index', { title: 'Contact' });
 });
 
-/* GET Business Contact List page???????????????????. */
+
 
 
 module.exports = router;
