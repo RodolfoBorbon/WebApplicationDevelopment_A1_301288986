@@ -30,7 +30,7 @@ Date: June 04, 2023
               <% } else {%>
               <li class = "nav-item">
                 <% } %>
-            <a class="nav-link" aria-current="page" href="/about"><i class="fas fa-info-circle"></i>About me</a>
+            <a class="nav-link" aria-current="page" href="/about"><i class="fas fa-info-circle"></i> About me</a>
           </li>
           
           <% if (title == "Projects") {%>
@@ -38,7 +38,7 @@ Date: June 04, 2023
               <% } else {%>
               <li class = "nav-item">
                 <% } %>
-            <a class="nav-link" aria-current="page" href="/projects"><i class="fab fa-elementor"></i>Projects</a>
+            <a class="nav-link" aria-current="page" href="/projects"><i class="fab fa-elementor"></i> Projects</a>
           </li>
           
           <% if (title == "Services") {%>
@@ -46,17 +46,24 @@ Date: June 04, 2023
               <% } else {%>
               <li class = "nav-item">
                 <% } %>
-            <a class="nav-link" aria-current="page" href="/services"><i class="fas fa-cogs"></i>Services</a>
+            <a class="nav-link" aria-current="page" href="/services"><i class="fas fa-cogs"></i> Services</a>
           </li>
 
-         <!--Business contact section?????????-->
+         <!--Business contacts section-->
+         <% if (title == "Business contacts") {%>
+          <li class = "nav-item active">
+            <% } else {%>
+            <li class = "nav-item">
+              <% } %>
+          <a class="nav-link" aria-current="page" href="/contacts-list"><i class="fa-regular fa-address-book"></i> Business Contacts</a>
+        </li>
           
           <% if (title == "Contact") {%>
             <li class = "nav-item active">
               <% } else {%>
               <li class = "nav-item">
                 <% } %>
-            <a class="nav-link" aria-current="page" href="/contact"><i class="fas fa-phone"></i>Contact us</a>
+            <a class="nav-link" aria-current="page" href="/contact"><i class="fas fa-phone"></i> Contact us</a>
           </li>
         </ul>
 

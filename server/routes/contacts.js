@@ -13,7 +13,7 @@ router.get('/', async (req, res, next) => {
         let contactsList = await Contacts.find();
         
         //show the view for the contacts-list
-        res.render('partials/business_contacts.ejs', { title: 'Business Contacts List', ContactsList: contactsList });
+        res.render('partials/business_contacts.ejs', { title: 'Business contacts', ContactsList: contactsList });
 
     } catch (err) {
         console.log(err);
