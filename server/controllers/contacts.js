@@ -85,6 +85,3 @@ module.exports.performDelete = async (req, res, next) => {
         res.status(500).send(err);
     }
 };
-
-
-
