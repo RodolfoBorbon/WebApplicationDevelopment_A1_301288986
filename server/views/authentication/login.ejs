@@ -1,11 +1,13 @@
- <!--Import header section from partials folder-->
+<link rel="stylesheet" href="/Content/app.css" />
+
+<!--Import header section from partials folder-->
  <%- include ('../partials/header.ejs') %>    
 
  <!--Import header section from partials folder-->
  <%- include ('../partials/main_nav.ejs') %> 
 
-<main class="container">
-    <!--Mesage area-->
+ <main class="login-container">
+    <!--Message area-->
     <% if (messages.length > 0) { %>
         <div class="alert alert-danger">
             <%= messages %>
@@ -30,7 +32,6 @@
                     name="password" 
                     placeholder="Enter password"
                     id="password" required>
-                    <br>
                     or
                     <a href="/register">Register here</a>
                 </fieldset>
@@ -40,6 +41,7 @@
                     <a href="/">
                         <input type="button" class="btn btn-warning" value="Cancel">
                     </a>
+                </fieldset>
             </form>
         </div>
     </div>

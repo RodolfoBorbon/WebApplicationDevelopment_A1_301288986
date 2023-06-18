@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
 //create a model class
-let User = mongoose.Schema(
+let user = mongoose.Schema(///////////////////////////////////////////////////////////it was User with capital U
     {
         username:
         {
@@ -19,7 +19,7 @@ let User = mongoose.Schema(
             trim: true,
             required: 'email address is required'
         },
-        dislayName:
+        displayName:
         {
             type: String,
             default: '',
@@ -29,12 +29,12 @@ let User = mongoose.Schema(
         created:
         {
             type: Date,
-            default: Date.now,
+            default: Date.now
         },
         update:
         {
             type: Date,
-            default: Date.now,
+            default: Date.now
         }
     },
     {
@@ -44,8 +44,7 @@ let User = mongoose.Schema(
 
 //configure options for User Model
 let options = ({ missingPasswordError: 'Wrong / Missing Password' });
-User.plugin(passportLocalMongoose, options);
-module.exports.User = mongoose.model('User', User);
+user.plugin(passportLocalMongoose, options);///////////////////////////////////////////////////////////it was User with capital U
+module.exports.User = mongoose.model('User', user);///////////////////////////////////////////////////////////it was User with capital U
 
 
- 

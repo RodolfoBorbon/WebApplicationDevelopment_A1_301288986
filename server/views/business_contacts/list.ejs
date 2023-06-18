@@ -5,55 +5,82 @@
  <!--Import header section from partials folder-->
  <%- include ('../partials/main_nav.ejs') %> 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-  <!--CSS Section-->
-  <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css">
-  <link rel='stylesheet' href="/@fortawesome/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="/Content/app.css" />
-</head>
-<body>
-    <main class="container">
-        <div class="row">
-            <div class="col-md-offset-3 col-md-11">
-                <h1><%= title %></h1>
-                <a href="/contacts-list/add" class="btn btn-primary"role="button">
-                    <i class="fas fa-plus-circle"></i> Add Contact</a>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title><%= title %></title>
+   <!--CSS Section-->
+   <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css">
+   <link rel='stylesheet' href="/@fortawesome/fontawesome-free/css/all.min.css">
+   <link rel="stylesheet" href="/Content/app.css" />
+ </head>
+ <body>
+     <main class="container">
+         <div class="row">
+             <div class="col-md-12">
                 <br>
-                <table class="table table-bordered table-striped table-hover">
-                    <!-- Table Headings-->
-                        <tr>
-                            <th class="text-center">Name</th>
-                            <th class="text-center">Number</th>
-                            <th class="text-center">Email</th>
-                            <th class="text-center"></th>
-                            <th class="text-center"></th>
-                        </tr>
-                        <!-- Table Body-->
-                        <% for (let count = 0; count < ContactsList.length; count++) { %>
-                            <tr>
-                                <td class="text-center col-2"><%= ContactsList[count].Name %></td>
-                                <td class="text-center col-2"><%= ContactsList[count].Number %></td>
-                                <td class="text-center"><%= ContactsList[count].Email %></td>
-                                <td class="text-center col-1">
-                                    <a href="/contacts-list/edit/<%= ContactsList[count]._id %>" class="btn btn-primary btn-sm">
-                                        <i class="fas fa-pencil-alt"></i> Edit</a>
-                                </td>
-                                <td class="text-center col-1">
-                                    <a href="/contacts-list/delete/<%= ContactsList[count]._id %>" class="btn btn-danger btn-sm">
-                                        <i class="fas fa-trash-alt"></i> Delete</a>
-                                </td>
-                            </tr>
-                        <% } %>
-                </table>
-            </div>
-        </div>
-    </main>
+                <br>
+                <br>
+                 <h3><%= title %></h3>
+                 <br
+                 <% if (typeof displayName == 'string' && displayName){ %>
+                 <a href="/contacts-list/add" class="btn btn-primary" role="button">
+                     <i class="fas fa-plus-circle"></i> Add Contact</a>
+                     <% } %>
+                 <br>
+ 
+                 <div class="table-responsive">
+                   <table class="table table-bordered table-striped table-hover custom-table-style">
+                       <!-- Table Headings-->
+                       <tr>
+                         <% if (typeof displayName == 'string' && displayName){ %>
+                         <th class="text-center col-2">Name</th>
+                         <th class="text-center col-2">Number</th>
+                         <th class="text-center col-3">Email</th>
+                         <th class="text-center col-2"></th>
+                         <th class="text-center col-2"></th>
+                         <% } else { %>
+                         <th class="text-center col-2">Name</th>
+                         <th class="text-center col-2">Number</th>
+                         <th class="text-center col-2">Email</th>
+                         <% } %>
+                       </tr>
+                     
+                       <!-- Table Body-->
+                       <% for (let count = 0; count < ContactsList.length; count++) { %>
+                       <tr>
+                         <% if (typeof displayName == 'string' && displayName){ %>
+                         <td class="text-center col-2"><%= ContactsList[count].Name %></td>
+                         <td class="text-center col-2"><%= ContactsList[count].Number %></td>
+                         <td class="text-center col-3"><%= ContactsList[count].Email %></td>
+                         <td class="text-center col-2">
+                           <a href="/contacts-list/edit/<%= ContactsList[count]._id %>" class="btn btn-primary btn-sm">
+                             <i class="fas fa-pencil-alt"></i> Edit
+                           </a>
+                         </td>
+                         <td class="text-center col-2">
+                           <a href="/contacts-list/delete/<%= ContactsList[count]._id %>" class="btn btn-danger btn-sm">
+                             <i class="fas fa-trash-alt"></i> Delete
+                           </a>
+                         </td>
+                         <% } else { %>
+                         <td class="text-center col-2"><%= ContactsList[count].Name %></td>
+                         <td class="text-center col-2"><%= ContactsList[count].Number %></td>
+                         <td class="text-center col-2"><%= ContactsList[count].Email %></td>
+                         <% } %>
+                       </tr>
+                       <% } %>
+                     </table>
+                 </div>
+             </div>
+         </div>
+     </main>
+ </body>
+ </html>
+ 
 
  <!--Import header section from partials folder-->
  <%- include ('../partials/bottom_nav.ejs') %>   

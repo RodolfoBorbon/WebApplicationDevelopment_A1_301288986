@@ -5,40 +5,40 @@ StudentID: 301288986
 Date: June 04, 2023
  */
 
-/* Style the navigation bar */
+/* Main navigation Section */
 .navbar {
-    background-color: #000000;
-  }
-  .navbar-brand {
-    color: #ffffff;
-    font-size: 2em;
-    font-weight: bold;
-    width: 50px;
-    height: 50px;
-  }
-  .navbar-nav {
-    margin-left: auto;
-    margin-bottom: 0em;
-    margin-top: 1%;
-  }
-  .nav-link {
-    color: #a4a7b1;
-  } 
-  /* Style the active navigation item */
-  .nav-item.active .nav-link {
-    font-weight: bold;
-    color: #60afb8;
-  }
+  background-color: black;
+}
 
-  .nav-link:hover {
-    color: rgb(255, 255, 255);
-  }
-  /* Style the logo image */
-  .navbar-logo {
-    width: 4%;
-    height: 4%;
-    margin-left: 25px;
-  }
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #cccccc;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.display-name {
+  text-decoration: none;
+}
 
 /* Style for the bottom navigation bar */
 footer {
@@ -64,6 +64,7 @@ footer {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #000;
 }
 
 #home-section p {
@@ -72,6 +73,8 @@ footer {
   margin-bottom: 30px;
   margin-left: 10%;
   margin-right: 10%;
+  color: #000;
+  font-style: normal;
 }
 
 #home-section button {
@@ -92,12 +95,14 @@ footer {
    #about-section {
     text-align: center;
     padding: 20px;
+    color: #000;
   }
   
   #about-section h1 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #000;
   }
   
   .rodolfo-image {
@@ -133,12 +138,14 @@ footer {
   #projects-section {
     text-align: center;
     padding: 20px;
+    color: #000;
   }
   
   #projects-section h1 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #000;
   }
   
   #projects-section ol {
@@ -178,6 +185,7 @@ footer {
   #services-section {
     text-align: center;
     padding: 20px;
+    color: #000;
   }
   
   #services-section h1 {
@@ -219,6 +227,7 @@ footer {
     clear: both;
   }
 
+
 /* Style for the contact page */
 #contact-section {
   text-align: center;
@@ -229,6 +238,7 @@ footer {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #000;
 }
 
 #contact-section form {
@@ -236,6 +246,7 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-top: 4%;
+  color: #000;
 }
 
 #contact-section label {
@@ -294,4 +305,65 @@ footer {
   display: none;
 }
 
-  
+/* Style for the login page */
+
+.login-container {
+  margin-top: 50px;
+}
+
+.login-container .alert {
+  margin-bottom: 20px;
+}
+
+.login-container h1 {
+  text-align: center;
+  color: #333; /* Add a color that contrasts with the background */
+  font-size: 24px; /* Adjust the font size as desired */
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+.login-container form {
+  margin-top: 20px;
+}
+
+.login-container .form-group {
+  margin-bottom: 15px;
+}
+
+.login-container label {
+  font-weight: bold;
+  color: #333; /* Add a color that contrasts with the background */
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-container .btn-success {
+  margin-right: 10px;
+}
+
+.login-container .btn-warning {
+  margin-left: 10px;
+}
+
+/*Style for table of contacts*/
+.custom-table-style th {
+  text-align: center;
+  font-size: 1em;
+  background-color: #629fa6;
+  color: #ffffff;
+}
+
+.custom-table-style td {
+  text-align: center;
+}
+
+h3 {
+  color: black; /* Replace with the desired color for the title */
+  font-style: normal;
+  text-align: center;
+}
