@@ -320,16 +320,16 @@ footer {
 .login-container h1 {
   text-align: center;
   color: #333; /* Add a color that contrasts with the background */
-  font-size: 24px; /* Adjust the font size as desired */
+  font-size: 34px; /* Adjust the font size as desired */
   margin-bottom: 20px; /* Add some space below the title */
 }
 
 .login-container form {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .login-container .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .login-container label {
@@ -349,7 +349,11 @@ footer {
 }
 
 .login-container .btn-warning {
-  margin-left: 10px;
+  margin-left: 50px;
+}
+
+.login-container .btn-success {
+  margin-left: 120px;
 }
 
 /*Style for table of contacts*/
