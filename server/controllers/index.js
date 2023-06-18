@@ -11,23 +11,23 @@ let User = userModel.User; //alias
 
 // create an instance of the index controller object
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', { title: 'Home' });
+    res.render('index', { title: 'Home', displayName: req.user ? req.user.displayName : '' });
 }
 
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('index', { title: 'About me' });
+    res.render('index', { title: 'About me', displayName: req.user ? req.user.displayName : '' });
 }
 
 module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('index', { title: 'Projects' });
+    res.render('index', { title: 'Projects', displayName: req.user ? req.user.displayName : '' });
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('index', { title: 'Services' });
+    res.render('index', { title: 'Services', displayName: req.user ? req.user.displayName : '' });
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('index', { title: 'Contact' });
+    res.render('index', { title: 'Contact', displayName: req.user ? req.user.displayName : '' });
 }
 
 //display the login page
