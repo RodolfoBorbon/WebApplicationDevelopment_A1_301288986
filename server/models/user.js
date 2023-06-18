@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
 //create a model class
-let user = mongoose.Schema(///////////////////////////////////////////////////////////it was User with capital U
+let user = mongoose.Schema(
     {
         username:
         {
@@ -44,7 +44,7 @@ let user = mongoose.Schema(/////////////////////////////////////////////////////
 
 //configure options for User Model
 let options = ({ missingPasswordError: 'Wrong / Missing Password' });
-user.plugin(passportLocalMongoose, options);///////////////////////////////////////////////////////////it was User with capital U
-module.exports.User = mongoose.model('User', user);///////////////////////////////////////////////////////////it was User with capital U
+user.plugin(passportLocalMongoose, options);
+module.exports.User = mongoose.model('User', user);
 
 
