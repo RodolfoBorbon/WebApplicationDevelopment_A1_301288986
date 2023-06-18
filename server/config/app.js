@@ -71,7 +71,7 @@ app.use(passport.session());
 //passport user configuration
 
 //create a User Model Instance
-let userModel = require('../modules/user');
+let userModel = require('../models/user');
 let User = userModel.User;
 
 //implement a User Authentication Strategy

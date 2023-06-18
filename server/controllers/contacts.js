@@ -4,7 +4,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 //Connect to our Contacts Model
-let Contacts = require('../modules/contacts');
+let Contacts = require('../models/contacts');
 
 //GET Route for the Contact List page - READ Operation
 module.exports.displayContactsList = async (req, res, next) => {
